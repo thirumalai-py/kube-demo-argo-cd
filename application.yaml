@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/thirumalai-py/kube-demo-argo-cd.git
-    targetRevision: HEAD
+    targetRevision: main
     path: k8s-manifest
   destination:
     server: https://kubernetes.default.svc
