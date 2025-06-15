@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-nginx-demo
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/thirumalai-py/kube-demo-argo-cd.git
+    targetRevision: HEAD
+    path: k8s-manifest
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: thiru-argo-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
