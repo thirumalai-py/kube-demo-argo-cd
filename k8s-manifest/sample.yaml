@@ -4,7 +4,7 @@ metadata:
   name: argo-nginx-demo
   namespace: thiru-argo-demo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
